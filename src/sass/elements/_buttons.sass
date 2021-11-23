@@ -1,0 +1,74 @@
+.btn
+    position: relative
+    font-weight: 700
+    font-size: 14px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: 12px 25px
+    height: 45px
+    border-radius: 6px
+    outline: 0!important
+    transition: .15s ease
+    overflow: hidden
+    border: none
+    color: #fff
+    background: transparent
+    transition: all .4s ease
+    z-index: 1
+
+    &:hover
+        color: #000
+        background: #fff
+        border-color: $danger
+        color: white
+        background: transparent
+        text-shadow: 0 0 15px #480f8a
+        box-shadow: 0 10px 18px #488d7133
+        transform: translateY(-7px)
+
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 230%
+        height: 280px
+        z-index: -1
+        background: linear-gradient(33deg,#6c2ab9,#6adc81)
+        transform: translate(-50%, -50%) rotate(0deg)
+        transition: all .3s ease
+        animation: rotate 4.2s linear infinite normal
+
+    @keyframes rotate
+        from
+            transform: translate(-50%, -50%) rotate(0deg)
+            filter: hue-rotate(0deg)
+        to
+            transform: translate(-50%, -50%) rotate(360deg)
+            filter: hue-rotate(10deg)
+
+    &:active
+        transition: all .1s ease!important
+        transform: scale(.95) translate(0, 0)
+    &:focus
+        box-shadow: 0 0 10px #6adc81
+
+.page_up
+    display: none
+    font-size: 40px
+    position: fixed
+    bottom: 20px
+    right: 20px
+    width: 44px
+    height: 44px
+    border-radius: 100%
+    background: linear-gradient(33deg,#6c2ab9,#6adc81)
+    transform: translate(-50%, -50%) rotate(0deg)
+    transition: all .3s ease
+    color: #fff
+    transition: all .3s ease
+    i
+        position: absolute
+        top: 1.5px
+        left: 2px

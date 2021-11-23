@@ -1,0 +1,119 @@
+.hamburger
+	position: fixed
+	top: 20px
+	right: 30px
+	height: 21px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-end
+	cursor: pointer
+	z-index: 123123
+
+	span
+		display: block
+		width: 33px
+		height: 4px
+		background: #fff
+
+	span.long
+		width: 36px
+
+.menu
+	position: fixed
+	top: 0
+	left: -100%
+	width: 100%
+	height: 100vh
+	z-index: 10
+	visibility: hidden
+	opacity: 0
+	transition: all .6s ease
+	&.active
+		left: 0
+		visibility: visible
+		opacity: 1
+
+	&_block
+		position: relative
+		width: 345px
+		height: 100%
+		background: linear-gradient(33deg,#6adc81, #6c2ab9)
+		padding-top: 140px
+		paddingleft: 40px
+		transition: all .6s
+		z-index: 10
+
+	&_close
+		position: absolute
+		top: 15px
+		right: 25px
+		line-height: 27px
+		font-size: 27px
+		cursor: pointer
+		i
+			color: #fff
+
+	&_list
+		list-style-type: none
+		padding-left: 60px
+
+	&_link
+		position: relative
+		font-size: 24px
+		line-height: 36px
+		font-weight: 700
+		margin-bottom: 15px
+
+		&::before
+			content: ''
+			position: absolute
+			left: -30px
+			top: 50%
+			transform: translateY(-50%)
+			width: 15px
+			height: 15px
+			opacity: 0
+			border-radius: 100%
+			border: 2px solid #fff
+			transform: translate(-50%, -50%) rotate(0deg)
+			transition: all .3s ease
+			animation: rotate 5s linear infinite normal
+
+		&:hover
+			&::before
+				opacity: 1
+				background-image: linear-gradient(33deg, #8d3ce9, #6adc81)
+
+		&.active
+			&::before
+				width: 20px
+				height: 20px
+				transform: translate(-50%, -50%) rotate(0deg)
+				transition: all .3s ease
+				animation: rotate 4.2s linear infinite normal
+
+		a
+			color: #fff
+
+	&_social
+		position: absolute
+		bottom: 50px
+		left: 50%
+		transform: translateX(-50%)
+		width: 120px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		i
+			font-size: 30px
+			color: #fff
+
+	&_overlay
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #000
+		opacity: .65

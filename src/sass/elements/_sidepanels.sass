@@ -1,0 +1,44 @@
+.side_panel
+    &.change
+        color: #000
+
+    position: fixed
+    top: 50%
+    transform: translateY(-50%) !important
+    left: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 400px
+    z-index: 3
+    color: #fff
+
+    &_devider
+        width: 2px
+        height: 70px
+        background: #fff
+
+    &_text
+        height: 150px
+        width: 25px
+        color: #fff
+        span
+            transform: rotate(-90deg) translate(-30%,-330%)
+            display: block
+            width: 185px
+            font-size: 17px
+            font-weight: 500
+
+    &_link
+        i
+            font-size: 25px
+            transform: rotate(-90deg)
+            transition: all .4s ease
+
+            &:hover
+                transform: translateX(-5px)
+                transform: rotate(0deg)
+                transform: scale(1.3)
+
+    

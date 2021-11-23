@@ -1,0 +1,119 @@
+// Dropdown
+.app-drop
+
+    position: relative
+
+    &-content
+
+        position: absolute
+        visibility: hidden
+        width: 190px
+        height: auto
+        top: 100%
+        right: 50%
+        padding-top: 10px
+        opacity: 0
+        transform: translateX(50%)
+        transition: 0
+
+        &-body
+
+            position: relative
+            width: 100%
+            height: auto
+            padding: 10px
+            border-radius: 8px
+            box-shadow: -15px 15px 25px #00000014
+            background: #fff
+
+            a
+                display: block
+                width: 100%
+                padding: 10px
+                border-radius: 6px
+                color: #000
+                transition: all .3s ease
+
+                &:hover
+                    color: #000
+                    background: #eef3fa
+
+    &:hover
+
+        .app-drop-content
+
+            visibility: visible
+            opacity: 1
+            transition: all .3s ease
+
+// Same but for mobile devices
+.app-drop-mob
+
+    cursor: pointer
+
+    &-body
+
+        max-height: 0
+        transition: all .4s ease
+        padding: 0
+
+        a
+
+            font-weight: 400
+            font-size: 20px!important
+
+    &.active
+
+        .app-drop-mob-body
+
+            max-height: 500px
+            padding: 20px 0
+
+// Section title
+.sec-tle
+
+    font-weight: 400
+    font-size: 4em
+    margin-bottom: 50px
+
+    &.mb
+
+        margin-bottom: 30px
+
+    @include mq('tablet', max)
+
+        font-size: 3.2em
+        margin-bottom: 30px
+
+// BreadCrumb
+.app-bread-crumb
+
+    font-size: 1.4em
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-top: 30px
+    color: #000
+    background: transparent
+
+    li
+
+        margin-right: 10px
+
+        &.active
+
+            color: $danger
+
+        &::after
+
+            content: '-'
+            margin-left: 10px
+            color: #000
+
+        &:last-child
+
+            &::after
+
+                display: none
